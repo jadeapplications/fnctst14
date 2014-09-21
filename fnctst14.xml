@@ -1,0 +1,97 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defreturn" id="218" inline="false" x="-5" y="-51">
+    <mutation statements="false">
+      <arg name="x"></arg>
+    </mutation>
+    <field name="NAME">inc</field>
+    <value name="RETURN">
+      <block type="math_arithmetic" id="228" inline="true">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <block type="variables_get" id="233">
+            <field name="VAR">x</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="240">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set" id="245" inline="true" x="-5" y="52">
+    <field name="VAR">i</field>
+    <value name="VALUE">
+      <block type="math_number" id="258">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="264" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="270" inline="true">
+            <field name="OP">GT</field>
+            <value name="A">
+              <block type="math_number" id="277">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="variables_get" id="284">
+                <field name="VAR">i</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="293">
+            <next>
+              <block type="robot_delay" id="295" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="302">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_right" id="311">
+                    <next>
+                      <block type="robot_delay" id="312" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="313">
+                            <field name="NUM">500</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="320" inline="true">
+                            <field name="VAR">i</field>
+                            <value name="VALUE">
+                              <block type="procedures_callreturn" id="325" inline="false">
+                                <mutation name="inc">
+                                  <arg name="x"></arg>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block type="variables_get" id="332">
+                                    <field name="VAR">i</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="341"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
