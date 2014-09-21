@@ -1,0 +1,10 @@
+{
+    "name": "fnctst14",
+    "version": "14.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "fnctst14.xml",
+    "author": "myke predko",
+    "minimum_firmware_version": 41
+}
