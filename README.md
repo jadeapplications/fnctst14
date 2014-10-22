@@ -6,9 +6,9 @@ fnctst14
 ### Project Information
 ```
 Type              : Scratch
-Version           : 01.0
+Version           : 1.0
 Author            : myke predko
-Firmware          : 41
+Firmware          : 42
 ```
 
 ### Release History:
